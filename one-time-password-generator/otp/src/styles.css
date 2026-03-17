@@ -1,0 +1,52 @@
+:root {
+    font-family: monospace;
+    background-color: #fff3b0;
+    color: #540b0e;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+/* From Uiverse.io by adamgiebl */ 
+button {
+  background: #e09f3e;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+button:disabled {
+  transform: none;
+  box-shadow: none;
+  color: #9e2a2b;
+  background-color: #fff3b0;
+  border: 3px solid #335c67;
+}
+
+button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+#otp-display {
+    margin: 10px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #9e2a2b;
+}
