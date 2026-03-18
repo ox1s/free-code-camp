@@ -7,10 +7,14 @@ export default function EventRSVPForm() {
   const [dietary, setDietary] = useState("");
   const [guests, setGuests] = useState(false);
 
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <div className="form-container">
       <h1>Event RSVP Form</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="input-group">
           <label>
             Name:
@@ -26,12 +30,13 @@ export default function EventRSVPForm() {
         <div className="input-group">
           <label>
             Email:
-            <input 
-                type="email" 
-                required="true" 
-                placeholder="Your Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)} />
+            <input
+              type="email"
+              required="true"
+              placeholder="Your Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </label>
         </div>
         <div className="input-group">
@@ -50,13 +55,22 @@ export default function EventRSVPForm() {
         <div className="input-group">
           <label>
             Dietary Preferences:
-            <input type="text" placeholder="Number of Attendees (Optional)" />
+            <input
+              type="text"
+              placeholder="Dietary Preferences (Optional)"
+              value={dietary}
+              onChange={(e) => setDietary(e.target.value)}
+            />
           </label>
         </div>
         <div className="checkbox-group">
           <label>
             Bringing additional guests
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              value={guests}
+              onChange={(e) => setGuests(e.target.checked)}
+            />
           </label>
         </div>
         <button type="submit">Submit RSVP</button>
